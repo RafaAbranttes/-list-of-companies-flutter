@@ -1,16 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get_it/get_it.dart';
+import 'package:list_of_companies/getIt.dart';
 import 'package:list_of_companies/routes/routes.dart';
+import 'package:list_of_companies/storage/storage.dart';
+import 'package:list_of_companies/store/store.dart';
 import 'package:list_of_companies/utils/utils.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  configServiceLocator();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
     ),
   );
-  runApp(const MyApp());
+  final loginController = GetIt.I<LoginStore>();
+  loginController.isLoggedIn = await Storage.getIsLoggedIn();
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyBehavior extends ScrollBehavior {
@@ -24,7 +33,6 @@ class MyBehavior extends ScrollBehavior {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
