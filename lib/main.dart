@@ -13,6 +13,14 @@ void main() {
   runApp(const MyApp());
 }
 
+class MyBehavior extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(
+      BuildContext context, Widget child, AxisDirection axisDirection) {
+    return child;
+  }
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -24,6 +32,12 @@ class MyApp extends StatelessWidget {
       title: 'ioasys',
       theme: themeDataLighCustom(),
       darkTheme: themeDataDarkCustom(),
+      builder: (context, child) {
+        return ScrollConfiguration(
+          behavior: MyBehavior(),
+          child: child ?? Container(),
+        );
+      },
       routes: routes(),
     );
   }
