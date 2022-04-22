@@ -2,7 +2,7 @@
 
 * Utilizando a versão 2.10.3 do flutter.
 
-* Prints do primeira versão: 
+* Prints da primeira versão: 
     
     <p align="center">
         <img  width="30%" height="30%" src="screenshot/Screenshot_2022-04-22-01-46-43-564_br.com.listofcompanies.list_of_companies.jpg" />
