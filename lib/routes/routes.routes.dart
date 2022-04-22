@@ -5,7 +5,7 @@ import 'package:list_of_companies/routes/routes.dart';
 Map<String, WidgetBuilder> routes() {
   Map<String, WidgetBuilder> routes = {
     Routes.initialPage: (context) => InitialPage(),
-    Routes.login: (context) => const LoginPage(),
+    Routes.login: (context) => LoginPage(),
   };
 
   return routes;

@@ -181,6 +181,7 @@ flutter:
     - assets/splash_screen/
     - assets/icon_app/
     - assets/loading/
+    - assets/app_bar/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

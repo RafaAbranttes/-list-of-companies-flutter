@@ -3,12 +3,13 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:get_it/get_it.dart';
 import 'package:list_of_companies/routes/routes.dart';
-import 'package:list_of_companies/store/store.dart';
 import 'package:lottie/lottie.dart';
+
+import 'controller/initial.controller.dart';
 
 class InitialPage extends StatelessWidget {
   InitialPage({Key? key}) : super(key: key);
-  final loginController = GetIt.I<LoginStore>();
+  final initialController = GetIt.I<InitialController>();
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class InitialPage extends StatelessWidget {
 
     return Observer(
       builder: (context) {
-        if (!loginController.isLoggedIn) {
+        if (!initialController.isLoggedIn) {
           SchedulerBinding.instance?.addPostFrameCallback((_) {
             Navigator.of(context).pushReplacementNamed(Routes.login);
           });

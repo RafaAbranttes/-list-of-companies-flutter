@@ -1,11 +1,10 @@
 import 'package:list_of_companies/storage/storage.dart';
 import 'package:mobx/mobx.dart';
+part 'initial.controller.g.dart';
 
-part 'login.store.g.dart';
+class InitialController = _InitialControllerBase with _$InitialController;
 
-class LoginStore = _LoginStoreBase with _$LoginStore;
-
-abstract class _LoginStoreBase with Store {
+abstract class _InitialControllerBase with Store {
   @observable
   bool _isLoggedIn = false;
 

@@ -4,8 +4,9 @@ import 'package:get_it/get_it.dart';
 import 'package:list_of_companies/getIt.dart';
 import 'package:list_of_companies/routes/routes.dart';
 import 'package:list_of_companies/storage/storage.dart';
-import 'package:list_of_companies/store/store.dart';
 import 'package:list_of_companies/utils/utils.dart';
+
+import 'pages/initial/controller/initial.controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,8 +16,8 @@ void main() async {
       statusBarColor: Colors.transparent,
     ),
   );
-  final loginController = GetIt.I<LoginStore>();
-  loginController.isLoggedIn = await Storage.getIsLoggedIn();
+  final initialController = GetIt.I<InitialController>();
+  initialController.isLoggedIn = await Storage.getIsLoggedIn();
   runApp(
     const MyApp(),
   );

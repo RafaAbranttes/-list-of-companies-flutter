@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'login.store.dart';
+part of 'initial.controller.dart';
 
 // **************************************************************************
 // StoreGenerator
@@ -8,22 +8,22 @@ part of 'login.store.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
-mixin _$LoginStore on _LoginStoreBase, Store {
+mixin _$InitialController on _InitialControllerBase, Store {
   Computed<bool>? _$isLoggedInComputed;
 
   @override
   bool get isLoggedIn =>
       (_$isLoggedInComputed ??= Computed<bool>(() => super.isLoggedIn,
-              name: '_LoginStoreBase.isLoggedIn'))
+              name: '_InitialControllerBase.isLoggedIn'))
           .value;
   Computed<bool>? _$loadingComputed;
 
   @override
-  bool get loading => (_$loadingComputed ??=
-          Computed<bool>(() => super.loading, name: '_LoginStoreBase.loading'))
+  bool get loading => (_$loadingComputed ??= Computed<bool>(() => super.loading,
+          name: '_InitialControllerBase.loading'))
       .value;
 
-  final _$_isLoggedInAtom = Atom(name: '_LoginStoreBase._isLoggedIn');
+  final _$_isLoggedInAtom = Atom(name: '_InitialControllerBase._isLoggedIn');
 
   @override
   bool get _isLoggedIn {
@@ -38,7 +38,7 @@ mixin _$LoginStore on _LoginStoreBase, Store {
     });
   }
 
-  final _$_loadingAtom = Atom(name: '_LoginStoreBase._loading');
+  final _$_loadingAtom = Atom(name: '_InitialControllerBase._loading');
 
   @override
   bool get _loading {
@@ -53,7 +53,7 @@ mixin _$LoginStore on _LoginStoreBase, Store {
     });
   }
 
-  final _$loginAsyncAction = AsyncAction('_LoginStoreBase.login');
+  final _$loginAsyncAction = AsyncAction('_InitialControllerBase.login');
 
   @override
   Future login({String? email, String? password}) {
@@ -61,7 +61,7 @@ mixin _$LoginStore on _LoginStoreBase, Store {
         .run(() => super.login(email: email, password: password));
   }
 
-  final _$logoutAsyncAction = AsyncAction('_LoginStoreBase.logout');
+  final _$logoutAsyncAction = AsyncAction('_InitialControllerBase.logout');
 
   @override
   Future logout() {
