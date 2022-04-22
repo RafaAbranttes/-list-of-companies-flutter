@@ -19,9 +19,16 @@ class InitialPage extends StatelessWidget {
     return Observer(
       builder: (context) {
         if (!initialController.isLoggedIn) {
-          SchedulerBinding.instance?.addPostFrameCallback((_) {
-            Navigator.of(context).pushReplacementNamed(Routes.login);
-          });
+          SchedulerBinding.instance?.addPostFrameCallback(
+            (_) {
+              Future.delayed(
+                const Duration(seconds: 3),
+                () {
+                  Navigator.of(context).pushReplacementNamed(Routes.login);
+                },
+              );
+            },
+          );
         }
 
         return Scaffold(
