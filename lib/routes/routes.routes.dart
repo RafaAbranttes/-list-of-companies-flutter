@@ -6,6 +6,8 @@ Map<String, WidgetBuilder> routes() {
   Map<String, WidgetBuilder> routes = {
     Routes.initialPage: (context) => InitialPage(),
     Routes.login: (context) => LoginPage(),
+    Routes.home: (context) => const HomePage(),
+    Routes.detail: (context) => const DetailPage(),
   };
 
   return routes;
