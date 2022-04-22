@@ -14,6 +14,7 @@ void main() async {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
+      systemNavigationBarColor: Colors.black,
     ),
   );
   final initialController = GetIt.I<InitialController>();
