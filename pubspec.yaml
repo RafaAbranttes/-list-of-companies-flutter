@@ -34,12 +34,19 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  lottie: ^1.3.0
+  mobx: ^2.0.7
+  flutter_mobx: ^2.0.5
+  shared_preferences: ^2.0.13
+  get_it: ^7.2.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_native_splash: ^2.1.6
   flutter_launcher_icons: "^0.9.2"
+  mobx_codegen: ^2.0.5+2
+  build_runner: ^2.1.10
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -173,6 +180,8 @@ flutter:
   assets:
     - assets/splash_screen/
     - assets/icon_app/
+    - assets/loading/
+    - assets/app_bar/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -189,35 +198,24 @@ flutter:
   fonts:
     - family: Rubik
       fonts:
-        - asset: fonts/Schyler-Regular.ttf
+        - asset: fonts/rubik/Rubik-Regular.ttf
         - asset: fonts/rubik/Rubik-Italic.ttf
           style: italic
         - asset: fonts/rubik/Rubik-Light.ttf
           weight: 300
-        - asset: fonts/rubik/Rubik-LightItalic.ttf
-          weight: 300 
         - asset: fonts/rubik/Rubik-Regular.ttf
           weight: 400 
         - asset: fonts/rubik/Rubik-Medium.ttf
           weight: 500 
-        - asset: fonts/rubik/Rubik-MediumItalic.ttf
-          weight: 500 
         - asset: fonts/rubik/Rubik-SemiBold.ttf
-          weight: 600 
-        - asset: fonts/rubik/Rubik-SemiBoldItalic.ttf
           weight: 600 
         - asset: fonts/rubik/Rubik-Bold.ttf
           weight: 700 
-        - asset: fonts/rubik/Rubik-BoldItalic.ttf
-          weight: 700 
         - asset: fonts/rubik/Rubik-ExtraBold.ttf
-          weight: 800 
-        - asset: fonts/rubik/Rubik-ExtraBoldItalic.ttf
           weight: 800 
         - asset: fonts/rubik/Rubik-Black.ttf
           weight: 900 
-        - asset: ffonts/rubik/Rubik-BlackItalic.ttf
-          weight: 900 
+      
     
   #
   # For details regarding fonts from package dependencies,
